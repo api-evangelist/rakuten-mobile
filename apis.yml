@@ -1,0 +1,175 @@
+aid: rakuten-mobile
+name: Rakuten Mobile
+description: >-
+  Rakuten Mobile is the Japanese mobile network operator (MNO) of Rakuten
+  Group, headquartered in Setagaya, Tokyo, and Japan's fourth nationwide
+  carrier alongside NTT Docomo, KDDI, and SoftBank. Commercially launched
+  in April 2020 and surpassing 10 million subscribers in December 2025,
+  Rakuten Mobile built and operates the world's first fully cloud-native,
+  end-to-end virtualized mobile network on Open RAN, with 4G population
+  coverage of 99.9% and expanding 5G plus 700 MHz Platinum Band rollout.
+  The same engineering effort spun out into Rakuten Symphony, a B2B
+  business that productizes the Rakuten Mobile playbook as the Symworld
+  platform — a cloud-native operating platform for telcos covering Open
+  RAN (CU/DU/RIC, Symware distributed unit appliance), Symworld Cloud
+  (Kubernetes-based hyperconverged telco cloud / CNP), OSS/BSS, site
+  management, and a marketplace of pre-integrated cloud-native network
+  functions from 50+ vendor partners. Symphony also offers Rakuten CPaaS
+  (carrier-grade SMS, Confirm/OTP, and Short URL APIs running on the
+  Rakuten Mobile network with JWT-authenticated REST endpoints at
+  api.cpaas.symphony.rakuten.net) and Rakuten Communications Platform
+  (RCP) for enterprise private 5G. Public, developer-accessible APIs are
+  concentrated in the CPaaS suite; the Symworld platform APIs themselves
+  are TM Forum-aligned but exposed under commercial engagement rather
+  than a public developer signup.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Telecommunications
+  - Mobile Network Operator
+  - Carrier
+  - 5G
+  - 4G LTE
+  - Open RAN
+  - Cloud Native
+  - Symworld
+  - Symphony
+  - CPaaS
+  - SMS
+  - OTP
+  - Short URL
+  - Messaging
+  - OSS
+  - BSS
+  - RIC
+  - Kubernetes
+  - Edge
+  - Private 5G
+  - Japan
+url: https://raw.githubusercontent.com/api-evangelist/rakuten-mobile/refs/heads/main/apis.yml
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: rakuten-mobile:rakuten-cpaas-sms-api
+    name: Rakuten CPaaS SMS / Messaging API
+    tags:
+      - SMS
+      - Messaging
+      - CPaaS
+      - A2P
+      - P2A
+      - Delivery Receipts
+    humanURL: https://docs.cpaas.symphony.rakuten.net/getting-started/sms-api/
+    baseURL: https://api.cpaas.symphony.rakuten.net/sms/v1
+    description: >-
+      Carrier-grade SMS API for sending and receiving A2P and P2A SMS at
+      scale on the Rakuten Mobile network, with delivery receipts pushed
+      to caller-configured webhooks. UTF-8 encoded, JWT-authenticated
+      REST endpoints (HTTP variant) alongside an SMPP variant for bulk
+      MNO interconnect. Sender addresses must be pre-registered with
+      operators. Used by enterprises for OTP delivery, transactional
+      alerts, and marketing campaigns through the Rakuten CPaaS
+      dashboard.
+    properties:
+      - url: https://docs.cpaas.symphony.rakuten.net/getting-started/sms-api/
+        type: Documentation
+      - url: https://docs.cpaas.symphony.rakuten.net/getting-started/sms-api/http-api/sending_sms
+        type: Documentation
+      - url: https://symphony.rakuten.com/cpaas/en/sms
+        type: ProductPage
+      - url: https://symphony.rakuten.com/cpaas/en/sms/feature
+        type: Features
+      - url: https://symphony.rakuten.com/cpaas/en/sms/faq-en/what-is-the-connection-method-to-the-api
+        type: FAQ
+  - aid: rakuten-mobile:rakuten-cpaas-confirm-api
+    name: Rakuten CPaaS Confirm (OTP) API
+    tags:
+      - OTP
+      - 2FA
+      - Authentication
+      - Confirm
+      - CPaaS
+      - Voice
+    humanURL: https://docs.cpaas.symphony.rakuten.net/getting-started/confirm-api/
+    baseURL: https://api.cpaas.symphony.rakuten.net
+    description: >-
+      One-time PIN delivery and verification API for two-factor
+      authentication and transaction confirmation, with SMS and Voice
+      channel support, lifecycle operations for request / validate /
+      resend / cancel, JWT bearer authentication, and standard JSON
+      payloads over HTTPS. Built for fraud-sensitive enterprise flows
+      requiring carrier-grade reach and audit trails.
+    properties:
+      - url: https://docs.cpaas.symphony.rakuten.net/getting-started/confirm-api/
+        type: Documentation
+      - url: https://symphony.rakuten.com/cpaas/en
+        type: ProductPage
+  - aid: rakuten-mobile:rakuten-cpaas-shorturl-api
+    name: Rakuten CPaaS Short URL API
+    tags:
+      - Short URL
+      - Tracking
+      - Campaigns
+      - CPaaS
+    humanURL: https://docs.cpaas.symphony.rakuten.net/getting-started/shorturl-api/
+    baseURL: https://api.cpaas.symphony.rakuten.net
+    description: >-
+      Link shortening and analytics API for CPaaS campaigns. Supports
+      create / retrieve / update / list / delete operations on short
+      URLs, with JWT bearer authentication, UTC timestamps, JSON over
+      HTTPS, and click-tracking telemetry that feeds the CPaaS
+      dashboard's campaign analytics views.
+    properties:
+      - url: https://docs.cpaas.symphony.rakuten.net/getting-started/shorturl-api/
+        type: Documentation
+      - url: https://symphony.rakuten.com/cpaas/en
+        type: ProductPage
+common:
+  - type: Website
+    url: https://network.mobile.rakuten.co.jp/
+  - type: CorporateWebsite
+    url: https://corp.mobile.rakuten.co.jp/
+  - type: Symphony
+    url: https://symphony.rakuten.com/
+  - type: SymworldPlatform
+    url: https://symphony.rakuten.com/symworld/a-new-kind-of-operating-platform
+  - type: OpenRAN
+    url: https://symphony.rakuten.com/open-ran
+  - type: Cloud
+    url: https://symphony.rakuten.com/cloud
+  - type: OSS
+    url: https://symphony.rakuten.com/oss
+  - type: SiteManagement
+    url: https://symphony.rakuten.com/site-management
+  - type: CPaaS
+    url: https://symphony.rakuten.com/cpaas/en
+  - type: DeveloperDocs
+    url: https://docs.cpaas.symphony.rakuten.net/
+  - type: Portal
+    url: https://portal.cpaas.symphony.rakuten.net/
+  - type: Symworld
+    url: https://symworld.rakuten.com/
+  - type: Newsroom
+    url: https://symphony.rakuten.com/newsroom
+  - type: Blog
+    url: https://symphony.rakuten.com/blog
+  - type: ParentCompany
+    url: https://global.rakuten.com/corp/
+  - type: GroupNewsroom
+    url: https://global.rakuten.com/corp/news/
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/rakuten-mobile/
+  - type: LinkedInSymphony
+    url: https://www.linkedin.com/company/rakuten-symphony/
+  - type: YouTube
+    url: https://www.youtube.com/@RakutenMobile
+  - type: Twitter
+    url: https://twitter.com/RakutenMobile_R
+  - type: TwitterSymphony
+    url: https://twitter.com/RakutenSymphony
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
