@@ -130,7 +130,7 @@ apis:
 common:
   - type: Website
     url: https://network.mobile.rakuten.co.jp/
-  - type: CorporateWebsite
+  - type: Website
     url: https://corp.mobile.rakuten.co.jp/
   - type: Symphony
     url: https://symphony.rakuten.com/
