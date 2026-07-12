@@ -128,6 +128,10 @@ apis:
       - url: https://symphony.rakuten.com/cpaas/en
         type: ProductPage
 common:
+  - type: VulnerabilityDisclosure
+    url: security/rakuten-mobile-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/rakuten-mobile-domain-security.yml
   - type: Website
     url: https://network.mobile.rakuten.co.jp/
   - type: Website
