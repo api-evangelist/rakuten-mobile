@@ -2,18 +2,11 @@
   "repo": "rakuten-mobile",
   "feeds": [
     {
-      "source": "https://symphony.rakuten.com/blog",
-      "feed_url": "",
-      "saved": 3,
-      "method": "agent-scrape"
-    },
-    {
       "source": "https://symphony.rakuten.com/newsroom",
-      "saved": 0,
       "error": "HTTPError"
     }
   ],
   "post_count": 7,
-  "fetched": "2026-06-27T13:04:03Z",
-  "agent_pulled": "2026-06-27"
+  "fetched": "2026-07-11T11:50:51Z",
+  "agent_pulled": "2026-07-04"
 }
